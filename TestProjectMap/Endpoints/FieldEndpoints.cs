@@ -37,8 +37,6 @@ public sealed class FieldEndpoints : CarterModule
     private static IResult ContainsPoint([FromBody] ContainsRequest req, IFieldService service)
     {
         var result = service.ContainsPoint(req.Lat, req.Lon);
-        if (result == null)
-            return Results.NotFound("Not found");
         return Results.Ok(result);
     }
 }
