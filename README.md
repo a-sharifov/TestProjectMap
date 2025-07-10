@@ -53,6 +53,12 @@ Content-Type: application/json
 }
 ```
 
+## Check Project
+для проверки endpoints есть два способа:
+1.  это через файл: TestProjectMap.http 
+2. Так же можно с помощю Swagger по : http://localhost:5184/index.html
+
+
 ---
 
 ## Notes & Issues

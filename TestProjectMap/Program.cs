@@ -11,14 +11,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCarter(
     new DependencyContextAssemblyCatalog(AssemblyReference.Assembly));
 
-builder.Services.AddOpenApi();
-
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.MapCarter();
