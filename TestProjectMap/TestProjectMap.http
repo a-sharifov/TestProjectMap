@@ -1,0 +1,5 @@
+@TestProjectMap_HostAddress = http://localhost:5184
+
+
+GET {{TestProjectMap_HostAddress}}/fields/
+Accept: application/json
