@@ -9,7 +9,7 @@ GET {{TestProjectMap_HostAddress}}/fields/2/size
 Accept: application/json
 
 ### Distance to field center 
-POST {{TestProjectMap_HostAddress}}/fields/3/distance
+POST {{TestProjectMap_HostAddress}}/fields/4/distance
 Content-Type: application/json
 Accept: application/json
 
@@ -18,12 +18,12 @@ Accept: application/json
   "lon": 41.345
 }
 
-### Check if point is inside any field 
+### Check if point is inside any field 41.3346809239899,45.7074047669366 
 POST {{TestProjectMap_HostAddress}}/fields/contains
 Content-Type: application/json
 Accept: application/json
 
 {
- "lat": 45.705,
-  "lon": 41.345
+  "lat": 45.696,
+  "lon": 41.344
 }

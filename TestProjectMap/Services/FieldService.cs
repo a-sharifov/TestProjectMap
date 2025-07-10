@@ -72,7 +72,7 @@ internal class FieldService : IFieldService
     public object ContainsPoint(double latitude, double longitude)
     {
         var fields = GetFields();
-        var point = new Point(latitude, longitude);
+        var point = new Point(longitude, latitude);
         foreach (var field in fields)
         {
             if (PointInPolygon(point, field.Locations.Polygon))
