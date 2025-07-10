@@ -1,9 +1,8 @@
-using System.Reflection;
 using TestProjectMap;
 using TestProjectMap.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddTransient<FieldService>();
+builder.Services.AddTransient<IFieldService, FieldService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCarter(
     new DependencyContextAssemblyCatalog(AssemblyReference.Assembly));

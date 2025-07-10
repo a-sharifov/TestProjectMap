@@ -1,5 +1,29 @@
 @TestProjectMap_HostAddress = http://localhost:5184
 
-
+### Get all fields
 GET {{TestProjectMap_HostAddress}}/fields/
 Accept: application/json
+
+### Get field size by id
+GET {{TestProjectMap_HostAddress}}/fields/2/size
+Accept: application/json
+
+### Distance to field center 
+POST {{TestProjectMap_HostAddress}}/fields/3/distance
+Content-Type: application/json
+Accept: application/json
+
+{
+  "lat": 45.705,
+  "lon": 41.345
+}
+
+### Check if point is inside any field 
+POST {{TestProjectMap_HostAddress}}/fields/contains
+Content-Type: application/json
+Accept: application/json
+
+{
+ "lat": 45.705,
+  "lon": 41.345
+}
